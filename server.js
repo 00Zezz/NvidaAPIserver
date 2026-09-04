@@ -209,7 +209,6 @@ app.post('/v1/chat/completions', async (req, res) => {
     
   } catch (error) {
     console.error('Proxy error:', error.message);
-    console.error('Full error details:', JSON.stringify(error.response?.data, null, 2));
     
     res.status(error.response?.status || 500).json({
       error: {
